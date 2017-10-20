@@ -3,7 +3,7 @@
 
 using namespace std;
 
-static const double PI=3.14159;
+//static const double PI=3.14159;	No hace falta
 
 class Punto2D{
 	private:
@@ -14,16 +14,16 @@ class Punto2D{
 			x=0;
 			y=0;
 		}
-		double Get_x(){
+		double getx(){
 			return x;
 		}
-		double Get_y(){
+		double gety(){
 			return y;
 		}	
-		void Set_x(double valor_x){
+		void setx(double valor_x){
 			x=valor_x;
 		}
-		void Set_y(double valor_y){
+		void sety(double valor_y){
 			y=valor_y;
 		}
 };
@@ -42,11 +42,11 @@ class Cuadrado{
 			lado=valor_lado;
 		}
 		
-		double Get_lado(){
+		double getlado(){
 			return lado;
 		}
 		
-		void Set_lado(double orig){
+		void setlado(double orig){
 			lado=orig;
 		}
 		
@@ -64,11 +64,11 @@ class Cuadrado{
 		
 		
 		bool Dentro(Cuadrado otro){
-			return lado>otro.Get_lado() && punto.Get_x()>otro.punto.Get_x() && punto.Get_y()<otro.punto.Get_y();
+			return lado>otro.getlado() && punto.getx()>otro.punto.getx() && punto.gety()<otro.punto.gety();
 		}
 		
 		bool operator==(Cuadrado otro){
-			return punto.Get_x()==otro.punto.Get_x() && punto.Get_y()==otro.punto.Get_y() && lado==otro.Get_lado();
+			return punto.getx()==otro.punto.getx() && punto.gety()==otro.punto.gety() && lado==otro.getlado();
 		}
 };
 
@@ -83,7 +83,7 @@ class Circunferencia{
 			radio=1;
 		}
 		
-		double GetRadio(){
+		double getRadio(){
 			return radio;
 		}
 		
@@ -100,31 +100,31 @@ class Circunferencia{
 		}
 		
 		bool PuntoContenido(Punto2D otro_punto){
-			return sqrt(pow(otro_punto.Get_x(),2)+pow(otro_punto.Get_y(),2))==radio;
+			return sqrt(pow(otro_punto.getx(),2)+pow(otro_punto.gety(),2))==radio;
 		}
 		
 		void Traslada(double traslada_x, double traslada_y){
-			mipunto.Set_x(mipunto.Get_x()+traslada_x);
-			mipunto.Set_y(mipunto.Get_x()+traslada_y);
+			mipunto.setx(mipunto.getx()+traslada_x);
+			mipunto.sety(mipunto.getx()+traslada_y);
 		}
 		
 		//Apartado A)
 		double DistanciaCircunf_a_Punto(Punto2D otro){
-			return sqrt(pow(mipunto.Get_x()-otro.Get_x(),2)+pow(mipunto.Get_y()-otro.Get_y(),2));
+			return sqrt(pow(mipunto.getx()-otro.getx(),2)+pow(mipunto.gety()-otro.gety(),2));
 		}
 		
 		//Apartado B)
 		/*
 		double DistanciaCircunf_a_Cuadrado(Cuadrado otro){
-			return sqrt(pow(mipunto.Get_x()-otro.punto.Get_x(),2)+pow(mipunto.Get_y()-otro.punto.Get_y()+otro.Get_lado(),2));
-			//Le sumamos otro.Get_lado() ya que se trata de la esquina superior izquierda en vez de la inferior.
+			return sqrt(pow(mipunto.getx()-otro.punto.getx(),2)+pow(mipunto.gety()-otro.punto.gety()+otro.getlado(),2));
+			//Le sumamos otro.getlado() ya que se trata de la esquina superior izquierda en vez de la inferior.
 		}
 		//Lo comento porque me da error en la parte privada
 		*/
 		
 		//Apartado C)
 		double DistanciaCircunf_a_Circunf(Circunferencia otra){
-			return sqrt(pow(mipunto.Get_x()-otra.mipunto.Get_x(),2)+pow(mipunto.Get_y()-otra.mipunto.Get_y(),2));
+			return sqrt(pow(mipunto.getx()-otra.mipunto.getx(),2)+pow(mipunto.gety()-otra.mipunto.gety(),2));
 		}
 		
 };
@@ -153,8 +153,8 @@ int main(){
 	cin >> radio;
 	
 	miCircunferencia.SetRadio(radio);
-	punto.Set_x(punto_x);
-	punto.Set_y(punto_y);
+	punto.setx(punto_x);
+	punto.sety(punto_y);
 	
 	cout << "Longitud: " << miCircunferencia.Longitud() << endl;
 	cout << "Área: " << miCircunferencia.Area() << endl;
