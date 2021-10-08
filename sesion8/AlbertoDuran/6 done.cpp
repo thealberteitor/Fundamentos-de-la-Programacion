@@ -5,7 +5,7 @@ using namespace std;
 int lee_int_rango(int min, int max) {
    int dato;
    do{
-      cout << "Introduzca un número: ";
+      cout << "Introduzca un nÃºmero: ";
       cin >> dato;
    }while (min>dato || max<dato);
    
@@ -31,6 +31,27 @@ long long int suma_factoriales(int n){
 	return suma;
 }
 
+int fib(int n, bool print = true)
+{
+  int toReturn = 0;
+
+  if( n > 0 )
+  {
+    if( n < 2 )
+      toReturn = 1;
+    else
+     toReturn = fib(n-1,false) + fib(n-2,false);
+
+    if( print )
+    {
+      fib(n-1);
+      std::cout << toReturn << ' ';
+    }
+  }
+
+  return toReturn;
+}
+
 int main(){
 	
 	const int MIN = 1;
@@ -41,6 +62,10 @@ int main(){
 	
 	cout << "El resultado de la sumatoria es: " << total << endl;
 	cout << endl;
+	
+	fib(5); std::cout << '\n';
+  	fib(8); std::cout << '\n';
+  	return 0;
 		
 	system("pause");
 
