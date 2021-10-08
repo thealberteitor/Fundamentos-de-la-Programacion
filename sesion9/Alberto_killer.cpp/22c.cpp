@@ -1,5 +1,5 @@
 /*
-Hacer una función que intercambie dos valores
+Hacer una funciÃ³n que intercambie dos valores
 */
 
 
@@ -15,11 +15,23 @@ void Intercambia(int &valor1, int &valor2){
 	valor2=aux;
 }
 
+int isPrimo(int valor){
+	
+	if(valor%2 == 0) return true;
+	int divisor = 3;	
+	while(divisor < valor){
+		if(valor%divisor == 0) return true;
+		divisor+=2;
+	}
+	return false;
+}
+
+
 int main(){
 	
 	int n1, n2;
 	
-	cout << "Introduca dos números: " << endl;
+	cout << "Introduca dos nÃºmeros: " << endl;
 	cin >> n1 >> n2;
 	
 	Intercambia(n1, n2);
