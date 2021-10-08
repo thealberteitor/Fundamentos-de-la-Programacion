@@ -37,8 +37,8 @@ int main(){
 		cin >> punto2.x >> punto2.y;
 		
 		distancia=DistanciaEuclidea(punto1, punto2);
-		
-		cout << "La distancia es de: " << distancia << endl;
+		if(distancia < 0) cout << "La distancia no puede ser negativa" << endl;
+		else cout << "La distancia es de: " << distancia << endl;
 		
 		valor=LeeValor();
 	}while(valor=='s');
