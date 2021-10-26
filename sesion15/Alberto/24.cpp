@@ -3,25 +3,25 @@ Defina la clase TablaRectangularEnteros usando
 una matriz de doble corchete como dato miembro privado.
 int matriz_privada[MAXIMO_FILAS][MAXIMO_COLUMNAS];
 Se pretende que pueda almacenar un conjunto de filas de enteros, todas ellas con el
-mismo número de columnas. Defina métodos para:
-a) Obtener el número de filas y columnas utilizadas, así como el dato que haya en
+mismo nÃºmero de columnas. Defina mÃ©todos para:
+a) Obtener el nÃºmero de filas y columnas utilizadas, asÃ­ como el dato que haya en
 una fila y columna.
 b) Devolver una fila completa como un objeto de la clase SecuenciaEnteros. El
-código de esta clase puede descargarse desde la siguiente dirección:
+cÃ³digo de esta clase puede descargarse desde la siguiente direcciÃ³n:
 http://decsai.ugr.es/~carlos/FP/SecuenciaEnteros.cpp
-c) Añadir una fila entera. La fila será un objeto de la clase SecuenciaEnteros.
+c) AÃ±adir una fila entera. La fila serÃ¡ un objeto de la clase SecuenciaEnteros.
 d) Comprobar si es igual a otra matriz.
 e) Obtener la traspuesta.
-f ) Comprobar si es simétrica (sólo tiene sentido cuando sea cuadrada, es decir,
-con el mismo número de filas que de columnas). Hágalo primero calculando la
-traspuesta de la matriz y viendo si es igual a su simétrica, usando los métodos
+f ) Comprobar si es simÃ©trica (sÃ³lo tiene sentido cuando sea cuadrada, es decir,
+con el mismo nÃºmero de filas que de columnas). HÃ¡galo primero calculando la
+traspuesta de la matriz y viendo si es igual a su simÃ©trica, usando los mÃ©todos
 anteriores.
-Hágalo también comprobando directamente si cada componente es igual a su
-simétrica y parando el recorrido en cuanto encuentre una componente que no lo
+HÃ¡galo tambiÃ©n comprobando directamente si cada componente es igual a su
+simÃ©trica y parando el recorrido en cuanto encuentre una componente que no lo
 verifique.
 g) Multiplicar dos tablas.
-Construya un programa principal que lea el número de filas y columnas de una tabla,
-los datos de ésta, e indique si es simétrica o no. A continuación, calcule la traspuesta
+Construya un programa principal que lea el nÃºmero de filas y columnas de una tabla,
+los datos de Ã©sta, e indique si es simÃ©trica o no. A continuaciÃ³n, calcule la traspuesta
 y multiplique la tabla por su traspuesta. Imprima el resultado en pantalla.
 */
 
@@ -188,8 +188,22 @@ class TablaRectangularEnteros{
 		}
 		
 	};
+
+
+class Coche_deportivo {
+	public:
+    		string op_brand;   
+    		string op_model;
+    		int year_factory;
+};
+
 	
 int main(){
+	// We first create car object
+	Coche_deportivo my_first_ferrari;
+	my_first_ferrari.op_brand = "Ferrari";
+	my_first_ferrari.op_model = "GTC4";
+	my_first_ferrari.year_factory = 2016;
 	
 	int fils, cols,valor;
 	cout << "Introduzca filas y columnas: " << endl;
@@ -208,9 +222,9 @@ int main(){
 	}
 	
 	if(tabla.Es_simetrica())
-		cout << "Es simétrica " << endl;
+		cout << "Es simÃ©trica " << endl;
 	else
-		cout << "No es simétrica " << endl;
+		cout << "No es simÃ©trica " << endl;
 		
 	
 	traspuesta=tabla.Traspuesta();
