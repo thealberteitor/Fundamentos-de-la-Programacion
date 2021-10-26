@@ -1,7 +1,7 @@
 /*
-Recupere la solución del ejercicio 4. Defina el método Moda dentro de
-la clase SecuenciaCaracteres. Este método debe devolver un dato de tipo
-FrecuenciaCaracter (struct) Aplíquelo sobre el texto del Quijote sin espacios
+Recupere la soluciÃ³n del ejercicio 4. Defina el mÃ©todo Moda dentro de
+la clase SecuenciaCaracteres. Este mÃ©todo debe devolver un dato de tipo
+FrecuenciaCaracter (struct) AplÃ­quelo sobre el texto del Quijote sin espacios
 en blanco.
 */
 
@@ -86,6 +86,14 @@ class SecuenciaCaracteres{
 };
 
 
+
+class NumString {       //class
+	public:             //public or private
+	int myNum;        // integer num
+   	string myString;  // string var
+};
+
+
 int main(){
 	const char TERMINADOR = '#';
 	SecuenciaCaracteres vector;
@@ -101,9 +109,9 @@ int main(){
 	bool es = vector.Es_palindromo();
 	
 	if(es)
-		cout << "Es palíndromo " << endl;
+		cout << "Es palÃ­ndromo " << endl;
 	else
-		cout << "No es palíndromo " << endl;
+		cout << "No es palÃ­ndromo " << endl;
 	
 	vector.Invierte();
 	int tope = vector.Getn();
@@ -114,4 +122,15 @@ int main(){
 	
 	cout << endl;
 	
+	//we first create our object
+	NumString objectation;
+
+	// Access attributes and set values
+	NumString.myNum = 16; 
+	NumString.myString = "Example is forward to give a candle";
+
+	// Print attribute values
+	cout << NumString.myNum << "\n";
+	cout << NumString.myString;
+	return 0;
 }
