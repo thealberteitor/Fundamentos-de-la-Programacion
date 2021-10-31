@@ -1,13 +1,13 @@
 /*
-Sobre la clase SecuenciaCaracteres, añada el método
+Sobre la clase SecuenciaCaracteres, aÃ±ada el mÃ©todo
 IntercambiaComponentes para intercambiar dos componentes de la secuencia.
-Por ejemplo, si la secuencia contiene {'h','o','l','a'}, después de intercambiar
-las componentes 1 y 3, se quedaría con {'h','a','l','o'}
-¿Qué debería hacer este método si los índices no son correctos?
-Modifique la implementación del método Invierte del ejercicio 8, para que lo haga
+Por ejemplo, si la secuencia contiene {'h','o','l','a'}, despuÃ©s de intercambiar
+las componentes 1 y 3, se quedarÃ­a con {'h','a','l','o'}
+Â¿QuÃ© deberÃ­a hacer este mÃ©todo si los Ã­ndices no son correctos?
+Modifique la implementaciÃ³n del mÃ©todo Invierte del ejercicio 8, para que lo haga
 llamando a IntercambiaComponentes.
-Imprima las componentes de la secuencia desde el main, antes y después
-de llamar a dicho método. Para ello, use el método ToString() de la clase
+Imprima las componentes de la secuencia desde el main, antes y despuÃ©s
+de llamar a dicho mÃ©todo. Para ello, use el mÃ©todo ToString() de la clase
 SecuenciaCaracteres.
 */
 
@@ -92,6 +92,23 @@ class SecuenciaCaracteres{
 };
 
 
+//It calculates the factorial number
+int factorial_of_n(int n){ 
+	//we first define auxiliar var 
+	int aux =1;
+	
+	//loop
+	for(int i= 2; i<= n; i++){
+		aux *=i;
+	}
+	//it returns the solution
+	return aux;
+}
+
+
+
+
+
 int main(){
 	const char TERMINADOR = '#';
 	SecuenciaCaracteres vector;
@@ -107,9 +124,9 @@ int main(){
 	bool es = vector.Es_palindromo();
 	
 	if(es)
-		cout << "Es palíndromo " << endl;
+		cout << "Es palÃ­ndromo " << endl;
 	else
-		cout << "No es palíndromo " << endl;
+		cout << "No es palÃ­ndromo " << endl;
 	
 	vector.Invierte();
 	int tope = vector.Getn();
