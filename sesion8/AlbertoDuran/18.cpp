@@ -5,6 +5,17 @@ using namespace std;
 bool Mayuscula(char caracter){
 	return (caracter>='A' && caracter<='Z');
 }
+
+//sum of two numbers
+void sum(int num1, int num2){
+    	int z;
+    	z = num1 + num2;
+    	cout << z;
+}
+
+int sum2(int x, int y){
+    return (x + y);
+}
 	
 char LeeMayuscula(){
 	
@@ -32,6 +43,6 @@ int main(){
 			contador_mayus++;
 	}while(caracter != TERMINADOR);
 	
-	cout << "Contador mayúsculas: " << contador_mayus << endl;
+	cout << "Contador mayÃºsculas: " << contador_mayus << endl;
 	
 }
