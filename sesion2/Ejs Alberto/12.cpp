@@ -2,6 +2,21 @@
 
 using namespace std;
 
+//sum two numbers and return the result
+int sum(int a, int b){
+  int n;
+  n=a+b;
+  return n;
+}
+
+//substract two numbers and return the result
+int sub(int a, int b){
+  int n;
+  n=a-b;
+  return n;
+}
+
+
 int main(){
 	
 	double poblacion;
@@ -10,7 +25,7 @@ int main(){
 	int anio2;
 	int anio3;
 	
-	cout << "Introduce poblaciÛn inicial: " << endl;
+	cout << "Introduce poblaci√≥n inicial: " << endl;
 	cin >> poblacion;
 	
 	cout << "Introduce tasa de natalidad: " << endl;
@@ -19,22 +34,22 @@ int main(){
 	cout << "Introduce tasa de mortalidad: " <<endl;
 	cin >> mortalidad;
 	
-	cout << "Introduce tasa de migraciÛn: " << endl;
+	cout << "Introduce tasa de migraci√≥n: " << endl;
 	cin >> migracion;
 	
-	//Hacemos los c·lculos correspondientes a cada aÒo
+	//Hacemos los c√°lculos correspondientes a cada a√±o
 	/*
-	El ejemplo de prueba no est· bien ya que la tasa de mortalidad se debe restar y no sumar
+	El ejemplo de prueba no est√° bien ya que la tasa de mortalidad se debe restar y no sumar
 	*/
 	anio1 = poblacion + (natalidad/1000)*poblacion - (mortalidad/1000)*poblacion + (migracion/1000)*poblacion;
 	cout << anio1 << endl;
 	anio2 = anio1 + (natalidad/1000)*anio1 - (mortalidad/1000)*anio1 + (migracion/1000)*poblacion;
 	anio3 = anio2 + (natalidad/1000)*anio2 - (mortalidad/1000)*anio2 + (migracion/1000)*poblacion;
 	
-	cout << "A los 3 aÒos la poblaciÛn ser· de: " << anio3 << " habitantes." << endl;
+	cout << "A los 3 a√±os la poblaci√≥n ser√° de: " << anio3 << " habitantes." << endl;
 	/*
 	
-	//Para no repetir cÛdigo hacemos bucle do-while;
+	//Para no repetir c√≥digo hacemos bucle do-while;
 	
 	int total;
 	int contador=0;
