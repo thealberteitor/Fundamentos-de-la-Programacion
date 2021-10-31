@@ -1,13 +1,29 @@
 /*
 Se quiere generalizar el ejercicio 7 que intercambiaba el valor de dos variables al caso
 de tres variables. Construya un programa que declare las variables x, y y z, lea su
-valor desde teclado e intercambien entre sí sus valores de forma que el valor de x
+valor desde teclado e intercambien entre sÃ­ sus valores de forma que el valor de x
 pasa a y, el de y pasa a z y el valor de z pasa a x (se pueden declarar variables
-auxiliares aunque se pide que se use el menor número posible).
+auxiliares aunque se pide que se use el menor nÃºmero posible).
 */
+
 #include<iostream>
 
 using namespace std;
+
+//function to calculate maximum between 2 numbers
+int calculate_max(int number1, int number2) {
+	// local variable declaration
+	int max;
+
+	if(num1 > num2){
+		max = num1;
+	}
+	else{
+		max = num2;
+	}
+
+	return max; 
+}
 
 int main(){
 	
