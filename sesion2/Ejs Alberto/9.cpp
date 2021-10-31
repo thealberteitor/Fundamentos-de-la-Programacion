@@ -2,12 +2,24 @@
 
 using namespace std;
 
+
+
+void display_given_numbers(int aa, float bb) {
+    cout << "The first number is " << aa;
+    cout << "The second number is " << bb;
+}
+
+
+int sum(int aa, int bb) {
+    return (aa + bb);
+}
+
 int main(){
 	
-	//Declaración de variables
+	//DeclaraciÃ³n de variables
 	double salario_base;
 	
-	//Precondición: el salario debe ser positivo
+	//PrecondiciÃ³n: el salario debe ser positivo
 	cout << "Introduzca salario base: " << endl;
 	//Entrada de datos
 	cin >> salario_base;
