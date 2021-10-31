@@ -1,14 +1,14 @@
 /*
 . [Ejercicio examen febrero 2013] Se desea implementar una clase para representar
-figuras geomÈtricas de tipo cuadrado. Un cuadrado viene definido por la coordenada
+figuras geom√©tricas de tipo cuadrado. Un cuadrado viene definido por la coordenada
 de la esquina inferior izquierda (x; y) y la longitud del lado.
 a) Definir los atributos de la clase y el constructor o constructores que estime
 oportunos.
-b) Definir los mÈtodos que considere adecuados. Al menos se deben de incluir los
-siguientes: (1) c·lculo del ·rea, (2) c·lculo del perÌmetro, (3) comprobar si un
-cuadrado tiene mayor ·rea que otro y (4) comprobar si un cuadrado est·
-completamente dentro de otro; al margen de los anteriores, se podr·n aÒadir cuantos
-mÈtodos estime oportunos
+b) Definir los m√©todos que considere adecuados. Al menos se deben de incluir los
+siguientes: (1) c√°lculo del √°rea, (2) c√°lculo del per√≠metro, (3) comprobar si un
+cuadrado tiene mayor √°rea que otro y (4) comprobar si un cuadrado est√°
+completamente dentro de otro; al margen de los anteriores, se podr√°n a√±adir cuantos
+m√©todos estime oportunos
 c) Sobrecargar el operador de igualdad ==. Entendemos que dos cuadrados son
 iguales si tienen la misma coordenada de la esquina inferior izquierda y el mismo
 lado.
@@ -18,6 +18,16 @@ Hacer un programa para probar la clase anterior
 #include<iostream>
 
 using namespace std;
+
+//return the exponential by recursive function
+double power(double base, unsigned int exp){
+	if (exp == 0){
+		return 1.0;
+	}
+	else{
+		return base * power(base, exp - 1);
+	}
+}
 
 class Cuadrado{
 	private:
@@ -105,7 +115,7 @@ int main(){
 		cout << "Son distintos " << endl;
 		
 	/*
-	Para calcular el valor de los mÈtodos simplemente hay que declarar las variables 
-	y llamar a los mÈtodos correspondientes
+	Para calcular el valor de los m√©todos simplemente hay que declarar las variables 
+	y llamar a los m√©todos correspondientes
 	*/
 }
