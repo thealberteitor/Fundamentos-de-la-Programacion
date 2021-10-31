@@ -1,18 +1,33 @@
 /*
-Definición de la clase y creación de objetos
-Defina la clase Recta. En este apartado utilice únicamente datos miembro públicos.
+DefiniciÃ³n de la clase y creaciÃ³n de objetos
+Defina la clase Recta. En este apartado utilice Ãºnicamente datos miembro pÃºblicos.
 Cree un programa principal que haga lo siguiente:
  Defina dos objetos de la clase Recta.
  Lea seis reales desde teclado.
  Le asigne los tres primeros a los coeficientes de una recta y los otros tres a
 la segunda recta.
- Calcule e imprima la pendiente de cada recta aplicando la fórmula:
+ Calcule e imprima la pendiente de cada recta aplicando la fÃ³rmula:
 pendiente = - A / B
 */
 
 #include<iostream>
 
 using namespace std;
+
+
+//recursive function
+double calculate_conditional_sum_of_series(double lim, double lambda, double x, int n){
+	if(x >= lim || lambda == 0){
+        	x = 1.0 / ((n*n*4.0 - 1) * n);
+        	lambda += x;
+        	n+=1;
+        	calc(lim, lambda, x, n);
+    	}
+    	else{
+        	return lambda;
+    	}
+}
+
 
 class Recta{
 	public:
