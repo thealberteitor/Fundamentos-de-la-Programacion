@@ -1,27 +1,39 @@
 /*
-Hacer la sucesión de Fibonacci con una función recursiva
+Hacer la sucesiÃ³n de Fibonacci con una funciÃ³n recursiva
 */
 
 #include<iostream>
 
 using namespace std;
 
-#include<iostream>
-using namespace std;
 
-int Fibonacci(int n)
-{
-   if(n==0 || n==1)
-      return n;
-   else
-      return fibo(n - 2) + fibo(n - 1);
+
+//return fibonacci series
+int Fibonacci(int n){
+	if(n==0 || n==1){
+      		return n;
+	}
+   	else{
+      		return Fibonacci(n - 2) + Fibonacci(n - 1);
+	}
 }
+
+
+//check if number is prime
+bool isPrime(int n){
+	for(int i=2; i<n/2; i++)
+		if(n%i == 0){
+			return false;
+		}
+	return true;
+}
+
 
 int main(){
 	
 	int n;
 	
-	cout << "Introduzca número n de la sucesión: " << endl;
+	cout << "Introduzca nÃºmero n de la sucesiÃ³n: " << endl;
 	cin >> n;
 	
 	for(int i=1; i<=n; i++){
