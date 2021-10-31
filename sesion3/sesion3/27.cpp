@@ -1,37 +1,60 @@
 /*
-Escriba una expresiÛn lÛgica que sea verdadera si una variable de tipo car·cter llamada
-letra es una letra min˙scula y falso en otro caso.
-Escriba una expresiÛn lÛgica que sea verdadera si una variable de tipo entero llamada
+Escriba una expresi√≥n l√≥gica que sea verdadera si una variable de tipo car√°cter llamada
+letra es una letra min√∫scula y falso en otro caso.
+Escriba una expresi√≥n l√≥gica que sea verdadera si una variable de tipo entero llamada
 edad es menor de 18 o mayor de 65.
-Escriba una expresiÛn lÛgica que sea verdadera si una variable de tipo entero llamada
-adivine est· entre 1 y 100.
-Escriba una expresiÛn lÛgica que sea verdadera si un aÒo es bisiesto. Los aÒos bisiestos
+Escriba una expresi√≥n l√≥gica que sea verdadera si una variable de tipo entero llamada
+adivine est√° entre 1 y 100.
+Escriba una expresi√≥n l√≥gica que sea verdadera si un a√±o es bisiesto. Los a√±os bisiestos
 son aquellos que o bien son divisibles por 4 pero no por 100, o bien son divisibles
 por 400.
 Escriba un programa que lea las variables letra, edad, adivine y anio, calcule el
-valor de las expresiones lÛgicas anteriores e imprima el resultado. Debe almacenarse
-el resultado de las expresiones lÛgicas en variables de tipo bool.
-Tenga en cuenta que cuando se imprime por pantalla (con cout) una expresiÛn lÛgica
+valor de las expresiones l√≥gicas anteriores e imprima el resultado. Debe almacenarse
+el resultado de las expresiones l√≥gicas en variables de tipo bool.
+Tenga en cuenta que cuando se imprime por pantalla (con cout) una expresi√≥n l√≥gica
 que es true, se imprime 1. Si es false, se imprime un 0.
 */
 
 
 #include<iostream>
+#define C1 4            // number of columns in Matrix-1
+#define C2 4            // number of columns in Matrix-2
 
 using namespace std;
 
+
+void mulMat(int matrix1[][C1], int matrix2[][C2]) {
+	int result[R1][C2];
+ 
+    	cout << "Multiplication of two matrices is:\n" << endl;
+ 
+    	for (int i = 0; i < R1; i++) {
+        	for (int j = 0; j < C2; j++) {
+            		result[i][j] = 0;
+ 
+            		for (int k = 0; k < R2; k++) {
+                		result[i][j] += matrix1[i][k] * matrix2[k][j];
+            		}
+ 
+            		cout << result[i][j] << "\t";
+        	}
+ 
+        	cout << endl;
+    	}
+}
+
 int main(){
 	
-	//DeclaraciÛn de variables
+	//Declaraci√≥n de variables
 	char letra;
 	int edad, adivine, anio;
 	bool expr_letra=false,expr_edad=false;
 	bool expr_entero=false, expr_anio=false;
 	
-	cout << "Introduzca letra, edad, n∫ entero y aÒo" <<endl;
+	cout << "Introduzca letra, edad, n¬∫ entero y a√±o" <<endl;
 	cin >> letra >> edad >> adivine >> anio;
 	
-	//C·lculos de las expresiones booleanas
+	//C√°lculos de las expresiones booleanas
 	if(letra >= 'a' && letra <= 'z')
 		expr_letra=true;
 	
