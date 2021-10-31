@@ -1,10 +1,18 @@
 /*
-Hacer la función factorial y potencia.
+Hacer la funciÃ³n factorial y potencia.
 */
 
 #include<iostream>
 
 using namespace std;
+double Exponential(double base, unsigned int exp){
+    	double product = 1.0;
+    	for (unsigned int i = 0; i < exp; ++i){
+        	product *= base;
+    	}
+    	return product;
+}
+
 
 int Factorial(int num){
 	
@@ -30,7 +38,7 @@ int main(){
 	int potencia;
 	int exponente;
 	
-	cout << "Introduzca un número: " << endl;
+	cout << "Introduzca un nÃºmero: " << endl;
 	cin >> numero;
 	
 	cout << "Introduzca exponente: " << endl;
