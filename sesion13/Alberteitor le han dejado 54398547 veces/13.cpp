@@ -5,16 +5,28 @@ Para borrar el bloque entre izda y dcha:
 Calcular num_a_borrar como dcha - izda + 1
 Recorrer las componentes -i- de la secuencia
 entre las posiciones dcha+1 hasta el final
-Colocar la componente -i- en la posición
+Colocar la componente -i- en la posiciÃ³n
 i - num_a_borrar
 Actualizar total_utilizados
-Este algoritmo resuelve el problema con un único bucle mientras que la versión ineficiente
-recurría a dos bucles anidados.
+Este algoritmo resuelve el problema con un Ãºnico bucle mientras que la versiÃ³n ineficiente
+recurrÃ­a a dos bucles anidados.
 */
 
 #include<iostream>
 
 using namespace std;
+
+//return the fibonacci series
+//T(n) = T(n-1) + T(n-2) which is exponential. 
+int fibonacci(int n){
+    	if (n ==0 || n==1){
+      		return n;
+    	}
+	else{
+    		return fib(n-1) + fib(n-2);
+	}
+}
+
 
 class SecuenciaCaracteres{
 	private:
