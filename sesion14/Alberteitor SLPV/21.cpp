@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
 
+// This the factorial function: returns the factorial of the given n
+int factorian_of_number(int n){ 
+	int ans =1;	
+	for(int i= 2; i<= n; i++){
+		ans *=i;
+	}
+	return ans;
+}
+
+
 int main(){
 	
 	const int FILAS = 100, COLUMNAS = 100;
@@ -67,7 +77,7 @@ int main(){
 		do{
 			cout << "\nIntroduzca el asiento deseado: ";
 			cin >> asiento_deseado;
-			if (asiento_deseado < 'A' || asiento_deseado > 'D'){ // PROBÉ DECLARAR INT EL ASIENTO DESEADO, Y POR ALGUNA RAZON ME CAUSABA UN BUCLE INFINITO, POR ESO DECLARO "asiento_deseado_numero" PARA YO HACER LA TRANSFORMACION.
+			if (asiento_deseado < 'A' || asiento_deseado > 'D'){ // PROBÃ‰ DECLARAR INT EL ASIENTO DESEADO, Y POR ALGUNA RAZON ME CAUSABA UN BUCLE INFINITO, POR ESO DECLARO "asiento_deseado_numero" PARA YO HACER LA TRANSFORMACION.
 				cout << "Asiento incorrecto\n";
 			}
 		}while (asiento_deseado < 'A' || asiento_deseado > 'D');
